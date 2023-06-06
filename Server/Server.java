@@ -7,5 +7,6 @@ public class Server {
         StudentImpl obj = new StudentImpl();
         Student s = (Student)UnicastRemoteObject.exportObject(obj, 0);
         Registry registry = LocateRegistry.getRegistry("127.0.0.1", 9000);
+        registry.rebind("l", s);
     }
 }
