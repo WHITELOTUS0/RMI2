@@ -1,4 +1,5 @@
 import java.rmi.*;
-public class StudentImpl {
+
+public class StudentImpl implements Student{
     
 }
