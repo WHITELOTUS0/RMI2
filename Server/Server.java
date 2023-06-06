@@ -6,5 +6,6 @@ public class Server {
         System.setProperty("java.rmi.server.hostname", "127.0.0.1");
         StudentImpl obj = new StudentImpl();
         Student s = (Student)UnicastRemoteObject.exportObject(obj, 0);
+        Registry registry = LocateRegistry.getRegistry("127.0.0.1", 9000);
     }
 }
